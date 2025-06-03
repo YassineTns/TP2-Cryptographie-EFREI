@@ -78,3 +78,37 @@ Message : Bonjour tout le monde
 Clé     : CLE
 => Message chiffré : DXOHSSV VSCV NI QSRHFI
 ```
+
+
+---
+
+## Partie 3 — 🔐 Confusion (Shannon) avec XOR + SHA-256
+
+Ce programme applique un chiffrement basé sur le principe de **confusion** décrit par Claude Shannon.
+
+---
+
+### 📄 Fichier concerné :
+`code/shannon.py`
+
+---
+
+### 🧠 Principe
+
+- Chaque caractère du **message** est combiné avec la **clé** via un **XOR**.
+- Le résultat est affiché en **hexadécimal** (base 16).
+- Ce résultat est ensuite **haché** avec l’algorithme **SHA-256** pour produire un condensé unique.
+
+---
+
+### ⚙️ Exemple d'utilisation
+
+```bash
+python code/shannon.py
+
+=== 🔐 Confusion (Shannon) avec XOR + SHA-256 ===
+Entrez un message : hello
+Entrez une clé : efrei
+
+Résultat du XOR (hexadécimal) : 0d031e0906
+🔐 SHA-256 du résultat XOR : b9ba7a93cb2b4249a9ea9537a9d3f737482cdfe9d59147bf64416ebf7a02d5b6
